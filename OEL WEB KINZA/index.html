@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Event Management</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- MY stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<style>
+    #myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+</style>
+<script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+    
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <!-- logo -->
+        <img src="./images/eventLogo.png" alt="" class="logo">
+        <!-- Icons -->
+        <input type="checkbox" class="check" id="toggle">
+        <label for="toggle" class="hamburger" id="hamburger">
+          <img src="./images/icon-hamburger.svg" alt="">
+        </label>
+
+        <ul class="nav-ul" id="nav-ul">
+          <li class="nav-link"><a href="#">Home</a></li>
+          <li class="nav-link"><a href="#about-section">Events</a></li>
+          <li class="nav-link"><a href="#footer">Contact</a></li>
+          <li class="nav-link"><a href="#article-section">Customer Reviews</a></li>
+          <li class="nav-link"><a href="#">Careers</a></li>
+        </ul>
+
+        <a href="C:\Users\ahed\Desktop\OEL WEB KINZA\RegistrationForm.html" class="btn">Register Now</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Welcome section -->
+  <section class="welcome-section">
+    <div class="container welcome">
+      <div class="welcome-text">
+        <h1 class="u mb-small">
+          WELCOME TO <span> KHUSHIAN</span>
+        </h1>
+        <p class="u-mb-large">
+            Handling the stress so your event is a success
+        </p>
+        <a href="C:\Users\ahed\Desktop\OEL WEB KINZA\RegistrationForm.html" class="btn">Register Now</a>
+      </div>
+     
+    </div>
+  </section>
+
+  <!-- EVENTS SECTION -->
+  <section class="about-section" id="about-section">
+    <div class="container about">
+      <div class="about-text">
+        <h2 class="u-mb-small heading-secondary">
+          Looking for an event planner?
+        </h2>
+        <p class="u-mb-large">
+          This is a place where the event you imagine, brought to life.
+        </p>
+      </div>
+
+      <div class="about-item">
+        <div class="about-item-box">
+          <img src="./images/icon evo.jpg" alt="" class="u-mb-small">
+          <h3 class="heading-tertiary u-mb-small">
+            BRIDAL SHOWER EVENT
+          </h3>
+          <p>A bridal shower is a party specifically for the bride. No men allowed. The main purpose of the party is for all your lady friends to come over (or go out to a restaurant or some other destination), and shower you with gifts in anticipation for your new life as a married woman.</p>
+        </div>
+
+        <div class="about-item-box">
+          <img src="./images/0.png" alt="" class="u-mb-small">
+          <h3 class="heading-tertiary u-mb-small">
+             BIRTHDAY PARTY
+          </h3>
+          <p>You'll help with the development, planning, and execution of events like weddings, birthday parties, and corporate receptions, among others. Your tasks will vary based on the unique needs of each client. But you'll often be tasked with helping them select a venue and then creating a floor plan for the event.</p>
+        </div>
+
+        <div class="about-item-box">
+          <img src="./images/00.jpg" alt="" class="u-mb-small">
+          <h3 class="heading-tertiary u-mb-small">
+            MEHNDI/MAYOON EVENTS
+          </h3>
+          <p>Held a day before the actual wedding, the Mehndi ceremony is a fun-filled, nostalgic sit-down for the bride, her cousins, siblings, friends, aunts and others. This is their day, filled with fun, laughter, songs, dances and games as each sits down for a dollop of Mehndi over their hands and feet.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- CAROUSAL SECTION -->
+  <section class="article-section" id="article-section">
+    <h2 class="u-mb-small heading-secondary">
+        CUSTOMER REVIEWS
+      </h2>
+      <p class="u-mb-large">
+        Customer feedbacks are given here..
+      </p>
+    <div class="items">
+  
+        <div class="card">
+                           <div class="card-body">
+                               <h4 class="card-title"><img src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png"></h4>
+                               
+                               <div class="template-demo">
+                                   <p>Online reviews can make or break a customer's decision to make a purchase. Read about these customer review sites where your customers'</p>
+                               </div>
+       
+                               <hr>
+       
+                               <div class="row">
+       
+                                     <div class="col-sm-2">
+       
+                                           <img class="profile-pic" src="https://img.icons8.com/bubbles/100/000000/edit-user.png">
+                                           
+                                     </div>
+       
+                                     <div class="col-sm-10">
+                                           
+                                           <div class="profile">
+                                             
+                                             <h4 class="cust-name">Delbert Simonas</h4>
+                                           <p class="cust-profession"
+       >Store Owner</p>    
+       
+                                           </div>
+                                           
+                                           
+                                     </div>
+                                     
+       
+                               </div>
+                           </div>
+                       </div>
+       
+       
+                       <div class="card">
+                           <div class="card-body">
+                               <h4 class="card-title"><img src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png"></h4>
+                               
+                               <div class="template-demo">
+                                   <p>When you think of Apple you automatically think expensive if your anything like me. When purchasing this laptop I was skeptical on laptops i purchased.</p>
+                               </div>
+       
+                               <hr>
+       
+                               <div class="row">
+       
+                                     <div class="col-sm-2">
+       
+                                          <img class="profile-pic" src="https://img.icons8.com/bubbles/100/000000/edit-user.png">
+       
+       
+                                           
+                                     </div>
+       
+                                     <div class="col-sm-10">
+                                           
+                                           <div class="profile">
+                                             
+                                             <h4 class="cust-name">Tikoh Amin</h4>
+                                           <p class="cust-profession
+       ">Salon Owner</p>    
+       
+                                           </div>
+                                           
+                                           
+                                     </div>
+                                     
+       
+                               </div>
+                           </div>
+                       </div>
+       
+       
+                       <div class="card">
+                           <div class="card-body">
+                               <h4 class="card-title"><img src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png"></h4>
+                               
+                               <div class="template-demo">
+                                   <p>I&rsquo;ve wanted a MacBook for a while now because of the build quality and the simplicity of the OS. I spend an average 6 hours a day using it for college and the battery still has a fair.</p>
+                               </div>
+       
+                               <hr>
+       
+                               <div class="row">
+       
+                                     <div class="col-sm-2">
+       
+                                           <img class="profile-pic" src="https://img.icons8.com/bubbles/100/000000/edit-user.png">
+                                           
+                                     </div>
+       
+                                     <div class="col-sm-10">
+                                           
+                                           <div class="profile">
+                                             
+                                             <h4 class="cust-name">Malachi Lensing</h4>
+                                           <p class="cust-profession
+       ">Marketing Manager</p>    
+       
+                                           </div>
+                                           
+                                           
+                                     </div>
+                                     
+       
+                               </div>
+                           </div>
+                       </div>
+       
+       
+                       <div class="card">
+                           <div class="card-body">
+                               <h4 class="card-title"><img src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png"></h4>
+                               
+                               <div class="template-demo">
+                                   <p>This MacBook has excellent processing speed. The screen is crystal clear and I really enjoy the touchbar. I set up the fingerprint reader.</p>
+                               </div>
+       
+                               <hr>
+       
+                               <div class="row">
+       
+                                     <div class="col-sm-2">
+       
+                                           <img class="profile-pic" src="https://img.icons8.com/bubbles/100/000000/edit-user.png">
+                                           
+                                     </div>
+       
+                                     <div class="col-sm-10">
+                                           
+                                           <div class="profile">
+                                             
+                                             <h4 class="cust-name">Christian Isla</h4>
+                                           <p class="cust-profession
+       ">Android Developer</p>    
+       
+                                           </div>
+                                           
+                                           
+                                     </div>
+                                     
+       
+                               </div>
+                           </div>
+                       </div>
+       
+       
+                       <div class="card">
+                           <div class="card-body">
+                               <h4 class="card-title"><img src="https://img.icons8.com/ultraviolet/40/000000/quote-left.png"></h4>
+                               
+                               <div class="template-demo">
+                                   <p>For the last 10 years, I have owned an old Gateway laptop. Although it was amazing and lasted me, it was time for an upgrade. I own an Apple phone so I decided to look into a computer.</p>
+                               </div>
+       
+                               <hr>
+       
+                               <div class="row">
+       
+                                     <div class="col-sm-2">
+       
+                                           <img class="profile-pic" src="https://img.icons8.com/bubbles/100/000000/edit-user.png">
+                                           
+                                     </div>
+       
+                                     <div class="col-sm-10">
+                                           
+                                           <div class="profile">
+                                             
+                                             <h4 class="cust-name">Lori Charles</h4>
+                                           <p class="cust-profession
+       ">Sales manager</p>    
+       
+                                           </div>
+                                           
+                                           
+                                     </div>
+                                     
+       
+                               </div>
+                           </div>
+                       </div>
+       
+       
+       
+       </div>
+  </section>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for events..">
+
+  <ul id="myUL">
+    <li><a href="#">Bridal Shower</a></li>
+    <li><a href="#">Mayoon</a></li>
+  
+    <li><a href="#">Mehndi</a></li>
+    <li><a href="#">Birthday</a></li>
+  
+    <li><a href="#">Nikkah</a></li>
+    
+  </ul>
+
+  <footer>
+    <div class="container">
+      <div class="footer" id="footer">
+
+        <div class="footer-icons">
+          <div class="footer-logo u-mb-large">
+            <img src="./images/logo.svg" alt="">
+          </div>
+
+          <a href="#">
+            <img src="./images/icon-facebook.svg" alt="">
+          </a>
+          <a href="#">
+            <img src="./images/icon-youtube.svg" alt="">
+          </a>
+          <a href="#">
+              <img src="./images/icon-twitter.svg" alt="">
+          </a>
+          <a href="#">
+              <img src="./images/icon-pinterest.svg" alt="">
+          </a>
+          <a href="#">
+              <img src="./images/icon-instagram.svg" alt="">
+          </a>
+
+        </div>
+
+        <div class="footer-links">
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <ul>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-credit">
+          <div class="u-mb-large">
+            <a href="C:\Users\ahed\Desktop\OEL WEB KINZA\RegistrationForm.html" class="btn">Register Now</a>
+          </div>
+          <div class="footer-text">
+            <p>© Khushian. All Rights Reserved</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </footer>
+  
+
+</body>
+</html>
